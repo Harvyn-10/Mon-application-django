@@ -1,0 +1,54 @@
+<!-- Ici je charge mes fichiers statiques -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Ici je lie mon html à son css -->
+    <link rel="stylesheet" href="{% static 'CSS/show.css' %}">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+<!-- header -->
+    <header>
+        <h1>RailExpress</h1>
+        <nav>
+          <a href="/RailExpress/index">Retourner à l'Accueil</a>
+        </nav>
+    </header>
+
+
+<!-- Les détails de chaque train -->
+    <section id="Bienvenue">
+        <h1>Bienvenue sur RailExpress</h1>
+        <br>
+        <p>Votre destination en ligne pour tout ce qui concerne les voyages en train ! Que vous soyez un passionné de chemin de fer, un voyageur fréquent ou simplement à la recherche d'une manière pratique et écologique de voyager, RailExpress est là pour vous offrir une expérience unique et sans tracas.</p>
+      </section>
+      
+    <main>
+        <section id="Details">
+            <article>
+                <h1><span> {{Destination}} </span></h1>
+                <img id="Cover" src=" {{Cover}} " alt="Ma cover">
+                <br><br>
+                <h3> {{Description}} </h3>
+                <br><br>
+                <img id="Plan" src=" {{Plan}} " alt="Mon Plan">
+                <h1> {{Datetime}} </h1>
+            </article>
+        </section>
+    </main>
+
+<!-- Footer -->
+    <footer>
+        © RailExpress - Tous droits réservés
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!-- Ici je charge mes fichiers statiques -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Ici je lie mon html à son css -->
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Header -->
+    <header>
+        <div class="Logo">
+            <a href="/RailExpress/index">RailExpress</a>
+        </div>
+        
+        <div class="nav">
+            <ul>
+                <li><a href="/RailExpress/index">Accueil</a></li>
+                <li><a href="/RailExpress/show/ {{randomTrain}} ">Random</a></li>
+
+            </ul>
+        </div>
+    </header>
+
+    <br><br>
+
+<!-- Ma barre de recherche -->
+    <form action="{% url 'index' %}" method="GET">
+        <input type="text" name="search-input" id="search-input" placeholder="  Entrez l'ID du train ex(1, 2)">
+        <input type="submit" name="search-btn" id="search-btn" value="Rechercher">
+    </form>
+
+<!-- Les cards qui affichent les informations de chaque train -->
+    <div class="container">
+        {% for train in MesTrains %}
+        <div class="Card">
+            <h1>{{ train.Destination }}</h1>
+            <br>
+            <img src=" {{train.Cover}} " alt="">
+            <br>
+            <br>
+            <h2>  {{train.Datetime}}  </h2>
+            <br><br>
+            <div class="To-show">
+                <a href="/RailExpress/show/{{train.IDTrain}}">Voir plus</a>
+            </div>
+            <br>
+        </div>
+        {% endfor%}
+        <br>
+        
+    </div>
+
+    <br>
+
+<!-- footer -->
+    <footer>
+        © RailExpress - Tous droits réservés
+    </footer>
+</body>
+</html>
+
+
+

@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #4F4557;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    background-color: #393646;
+    padding: 10px;
+}
+
+.nav{
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-right: 100px;
+    font-size: large;
+}
+
+
+.nav li{
+    list-style: none;
+}
+
+.nav li :hover{
+    border-bottom: 2px solid black;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+}
+
+/* Concernant la barre de recherche */
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+#search-input{
+    width: 800px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+
+/* Concernant les informations de chaque train */
+
+.container{
+    display: flex;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
+.Card{
+    border-radius: 40px;
+    margin-left: 60px;
+    width: 400px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.Card p{
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+}
+
+.Card h1{
+    margin-top: 10px;
+}
+
+img{
+    width: 396px;
+    height: 220px;
+}
+
+.Logo a{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+}
+
+
+.To-show :hover{
+    color: white;
+    background-color: #393646;
+}
+
+.To-show a {
+    font-size: medium;  
+    padding: 10px;
+    border: 2px solid ;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin: 2rem;
+    color: #fff;
+    font-size: 0.9rem;
+  }
